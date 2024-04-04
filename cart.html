@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftCorner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(171, 171, 171);
+    }
+
+    header {
+      background-color: #e0d8ab;
+      color: #030303;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size:25px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size:15px;
+    }
+
+    h4 {
+      margin-top: 50px;
+      margin-left: 30px;
+      font-size:20px;
+      text-align: left;
+
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #202020;
+      margin: 0 10px;
+      font-size: large;
+      font-weight: bold;
+    }
+    
+    .image1 {
+      margin-left: 0px;
+      width: 1520px;
+      height: 150px;
+      background-position: center;
+    }
+
+    .parent-container {
+      display: flex;
+      flex-direction: column; /* Change to column layout */
+      align-items: left; /* Align items to the center horizontally */
+    }
+
+    .productcontainer
+    {
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: 40px;
+      height: 10px;
+      width: 700px;
+      margin-top: 50px;
+      text-align: l;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+    }
+
+    .secondproductcontainer
+    {
+      position: absolute;
+      margin-top: 110px;
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: 40px;
+      height: 240px;
+      width: 700px;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+    }
+
+    .cartcontainer {
+      position: absolute;
+      margin-left: 850px;
+      height: 300px;
+      width: 600px;
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #d2c88f;
+      border: 2px solid rgb(131, 131, 131);
+      color: #fff;
+      padding: 15px 50px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #555;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CraftCorner</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
+
+  <img src="shop_image.jpg" alt="CraftCorner Shop" class="image1">
+
+  <div class="parent-container">
+    <div class="productcontainer">
+        
+      <h3>Product</h3>
+      <h3>Price</h3>
+      <h3>Quantity</h3>
+      <h3>Sub Total</h3>
+    </div>
+
+    <div class="cartcontainer">
+      <h2>Cart Total</h2>
+      <h4>Subtotal</h4>
+      <h4>Total</h4>
+
+      <a href="checkout.html" class="cta-button">Check Out</a>
+
+    </div>
+
+    <div class="secondproductcontainer">
+      <!-- Add content here -->
+    </div>
+
+    
+  </div>
+
+</body>
+</html>

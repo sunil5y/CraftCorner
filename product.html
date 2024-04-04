@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftCorner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(171, 171, 171);
+    }
+
+    header {
+      background-color: #e0d8ab;
+      color: #030303;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 8;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 10;
+      text-align: left;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+
+    h3 {
+      margin: 10;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 15px;
+    }
+
+    h4 {
+      margin: 0;
+      text-align: left;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+    
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #202020;
+      margin: 0 10px;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .parent-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .imgcontainer
+    {
+      margin-left: 20px;
+      height: 400px;
+      width: 400px;
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+    }
+
+    .container {
+      margin-left: 130px;
+      height: 400px;
+      width: 600px;
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+    }
+
+    .imgcontainer img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .button-container {
+      
+      margin-left: 90px;
+      margin-top: 50px;
+      display: flex;
+    }
+
+    .quantity-buttons button {
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .descontainer {
+      margin-left: 100px;
+      height: 170px;
+      width: 1300px;
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      background-color: #e0d8ab; /* Change background color to white */
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CraftCorner</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
+
+  <div class="parent-container">
+    <div class="imgcontainer">
+      <img src="https://nepalhandicraftproduct.com/uploads/product/mantra-thangka-painting-05.jpg" alt="Sample Image">
+    </div>
+
+    <div class="container">
+      <h1>Buddha Life Story</h1>
+      <h2>Nrs 9900</h2>
+      <h3>This Thangka painting shows the various episodes of the life of Lord Buddha and his path towards spiritual enlightenment. This painting depicts the different events of the life story of the Shakyamuni Buddha.</h3>
+      <h4>Price</h4>
+      <h3>25x20 inches, 63x51 cms</h3>
+      
+      <div class="button-container">
+        <div class="quantity-buttons">
+          <button id="remove">-</button>
+          <span id="quantity">1</span>
+          <button id="add">+</button>
+        </div>
+        
+        <div>
+          <button onclick="buyNow()">Buy Now</button>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>   /* Quanntity of the Product */
+    const addButton = document.getElementById('add');
+    const removeButton = document.getElementById('remove');
+    const quantityText = document.getElementById('quantity');
+
+    addButton.addEventListener('click', () => {
+      quantityText.textContent = parseInt(quantityText.textContent) + 1;
+    });
+
+    removeButton.addEventListener('click', () => {
+      const currentQuantity = parseInt(quantityText.textContent);
+      if (currentQuantity > 1) {
+        quantityText.textContent = currentQuantity - 1;
+      }
+    });
+
+    function buyNow() {
+      window.location.href = 'cart.html'; // Redirect to cart.html
+    }
+  </script>
+  
+  <div class="descontainer">
+    <h2>Crafter</h2>
+    <h3>Ananda Dharmapala, a revered thangka painter from the Kathmandu Valley, meticulously crafts the Buddha Life Story Nepali thangka painting with profound devotion. With skill honed over decades, Ananda imbues each brushstroke with reverence, capturing the essence of Buddha's life and teachings. Through vibrant colors and intricate details, Ananda invites viewers to embark on a journey of spiritual contemplation and inner peace. The painting serves as a testament to Ananda's mastery and deep connection to the Buddhist tradition, inspiring awe and reverence in all who behold it.</h3>
+  </div>
+
+</body>
+</html>
