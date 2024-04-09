@@ -46,7 +46,6 @@
       font-size: 20px;
       margin-left: 15px;
     }
-    
 
     nav {
       text-align: center;
@@ -66,8 +65,7 @@
       justify-content: center;
     }
 
-    .imgcontainer
-    {
+    .imgcontainer {
       margin-left: 20px;
       height: 400px;
       width: 400px;
@@ -97,7 +95,6 @@
     }
 
     .button-container {
-      
       margin-left: 90px;
       margin-top: 50px;
       display: flex;
@@ -137,7 +134,6 @@
       border-radius: 10px;
       margin-bottom: 30px;
     }
-
   </style>
 </head>
 <body>
@@ -151,7 +147,7 @@
 
   <div class="parent-container">
     <div class="imgcontainer">
-      <img src="https://nepalhandicraftproduct.com/uploads/product/mantra-thangka-painting-05.jpg" alt="Sample Image">
+      <img id="product-img" src="" alt="Product Image">
     </div>
 
     <div class="container">
@@ -176,7 +172,16 @@
     </div>
   </div>
   
-  <script>   /* Quanntity of the Product */
+  <script>
+    // Get the image URL from the query parameters
+    const urlimg = new URLSearchParams(window.location.search);
+    const imgUrl = urlimg.get('img');
+
+    // Set the image source
+    const productImg = document.getElementById('product-img');
+    productImg.src = imgUrl;
+
+    // Quantity of the Product
     const addButton = document.getElementById('add');
     const removeButton = document.getElementById('remove');
     const quantityText = document.getElementById('quantity');
