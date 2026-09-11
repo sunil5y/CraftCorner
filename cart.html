@@ -1,170 +1,283 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Defines the character encoding for the webpage -->
   <meta charset="UTF-8">
+
+  <!-- Makes the webpage responsive on different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title displayed in the browser tab -->
   <title>CraftCorner</title>
+
   <style>
+
+    /* ---------------- BODY STYLING ---------------- */
+
+    /* Styles the entire webpage */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: rgb(171, 171, 171);
+      font-family: Arial, sans-serif; /* Sets the font */
+      margin: 0; /* Removes default browser margin */
+      padding: 0; /* Removes default browser padding */
+      background-color: rgb(171, 171, 171); /* Sets page background color */
     }
 
+
+    /* ---------------- HEADER ---------------- */
+
+    /* Styles the top header section */
     header {
-      background-color: #e0d8ab;
-      color: #030303;
-      padding: 20px 0;
-      text-align: center;
+      background-color: #e0d8ab; /* Header background color */
+      color: #030303; /* Text color */
+      padding: 20px 0; /* Adds vertical space inside header */
+      text-align: center; /* Centers the header content */
     }
 
+
+    /* Styles the main heading */
     h1 {
-      margin: 0;
+      margin: 0; /* Removes default margin */
     }
 
+
+    /* Styles h2 headings */
     h2 {
-      margin: 0;
-      font-size:25px;
+      margin: 0; /* Removes default margin */
+      font-size: 25px; /* Sets heading size */
     }
 
+
+    /* Styles h3 headings */
     h3 {
-      margin: 0;
-      font-size:15px;
+      margin: 0; /* Removes default margin */
+      font-size: 15px; /* Sets heading size */
     }
 
+
+    /* Styles h4 headings */
     h4 {
-      margin-top: 50px;
-      margin-left: 30px;
-      font-size:20px;
-      text-align: left;
-
+      margin-top: 50px; /* Adds space above the heading */
+      margin-left: 30px; /* Moves the heading from the left */
+      font-size: 20px; /* Sets font size */
+      text-align: left; /* Aligns text to the left */
     }
 
+
+    /* ---------------- NAVIGATION ---------------- */
+
+    /* Styles the navigation container */
     nav {
-      text-align: center;
-      margin-top: 20px;
+      text-align: center; /* Centers navigation links */
+      margin-top: 20px; /* Adds space above navigation */
     }
 
+
+    /* Styles links inside the navigation */
     nav a {
-      text-decoration: none;
-      color: #202020;
-      margin: 0 10px;
-      font-size: large;
-      font-weight: bold;
+      text-decoration: none; /* Removes underline */
+      color: #202020; /* Sets link color */
+      margin: 0 10px; /* Adds horizontal spacing between links */
+      font-size: large; /* Makes links larger */
+      font-weight: bold; /* Makes links bold */
     }
-    
+
+
+    /* ---------------- SHOP IMAGE ---------------- */
+
+    /* Styles the image displayed below the header */
     .image1 {
-      margin-left: 0px;
-      width: 1520px;
-      height: 150px;
-      background-position: center;
+      margin-left: 0px; /* Removes left spacing */
+      width: 1520px; /* Sets image width */
+      height: 150px; /* Sets image height */
+      background-position: center; /* Centers the background position */
     }
 
+
+    /* ---------------- MAIN CONTAINER ---------------- */
+
+    /* Parent container that holds the product and cart sections */
     .parent-container {
-      display: flex;
-      flex-direction: column; /* Change to column layout */
-      align-items: left; /* Align items to the center horizontally */
+      display: flex; /* Enables Flexbox */
+      flex-direction: column; /* Places children vertically */
+      align-items: left; /* Aligns children toward the left */
     }
 
-    .productcontainer
-    {
-      display: flex;
-      justify-content: space-evenly;
-      margin-left: 40px;
-      height: 10px;
-      width: 700px;
-      margin-top: 50px;
-      text-align: l;
-      padding: 20px;
-      color: black;
-      background-color: #e0d8ab; /* Change background color to white */
-      border-radius: 10px;
+
+    /* ---------------- PRODUCT HEADER ---------------- */
+
+    /* Container containing Product, Price, Quantity and Sub Total */
+    .productcontainer {
+      display: flex; /* Enables Flexbox */
+      justify-content: space-evenly; /* Distributes items evenly */
+      margin-left: 40px; /* Adds space from the left */
+      height: 10px; /* Sets container height */
+      width: 700px; /* Sets container width */
+      margin-top: 50px; /* Adds space above container */
+      text-align: l; /* Intended to align text */
+      padding: 20px; /* Adds internal spacing */
+      color: black; /* Sets text color */
+      background-color: #e0d8ab; /* Sets container background */
+      border-radius: 10px; /* Rounds the corners */
     }
 
-    .secondproductcontainer
-    {
-      position: absolute;
-      margin-top: 110px;
-      display: flex;
-      justify-content: space-evenly;
-      margin-left: 40px;
-      height: 240px;
-      width: 700px;
-      text-align: center;
-      padding: 20px;
-      color: black;
-      background-color: #e0d8ab; /* Change background color to white */
-      border-radius: 10px;
+
+    /* ---------------- PRODUCT AREA ---------------- */
+
+    /* Container where individual product information can be displayed */
+    .secondproductcontainer {
+      position: absolute; /* Positions the container independently */
+      margin-top: 110px; /* Moves container downward */
+      display: flex; /* Enables Flexbox */
+      justify-content: space-evenly; /* Distributes content evenly */
+      margin-left: 40px; /* Adds left spacing */
+      height: 240px; /* Sets container height */
+      width: 700px; /* Sets container width */
+      text-align: center; /* Centers text */
+      padding: 20px; /* Adds internal spacing */
+      color: black; /* Sets text color */
+      background-color: #e0d8ab; /* Sets container background */
+      border-radius: 10px; /* Rounds the corners */
     }
 
+
+    /* ---------------- CART ---------------- */
+
+    /* Styles the shopping cart total section */
     .cartcontainer {
-      position: absolute;
-      margin-left: 850px;
-      height: 300px;
-      width: 600px;
-      margin-top: 50px;
-      text-align: center;
-      padding: 20px;
-      color: black;
-      background-color: #e0d8ab; /* Change background color to white */
-      border-radius: 10px;
+      position: absolute; /* Positions cart independently */
+      margin-left: 850px; /* Moves cart toward the right */
+      height: 300px; /* Sets cart height */
+      width: 600px; /* Sets cart width */
+      margin-top: 50px; /* Adds space above cart */
+      text-align: center; /* Centers cart content */
+      padding: 20px; /* Adds internal spacing */
+      color: black; /* Sets text color */
+      background-color: #e0d8ab; /* Sets cart background */
+      border-radius: 10px; /* Rounds the corners */
     }
 
+
+    /* ---------------- CHECKOUT BUTTON ---------------- */
+
+    /* Styles the checkout button */
     .cta-button {
-      display: inline-block;
-      background-color: #d2c88f;
-      border: 2px solid rgb(131, 131, 131);
-      color: #fff;
-      padding: 15px 50px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 16px;
-      margin-top: 20px;
+      display: inline-block; /* Allows padding and dimensions */
+      background-color: #d2c88f; /* Button background */
+      border: 2px solid rgb(131, 131, 131); /* Adds border */
+      color: #fff; /* Button text color */
+      padding: 15px 50px; /* Adds space inside button */
+      text-decoration: none; /* Removes link underline */
+      border-radius: 10px; /* Rounds button corners */
+      font-size: 16px; /* Sets text size */
+      margin-top: 20px; /* Adds space above button */
     }
 
+
+    /* Changes button color when mouse hovers over it */
     .cta-button:hover {
       background-color: #555;
     }
-    
 
   </style>
 </head>
+
+
 <body>
+
+  <!-- ================= HEADER SECTION ================= -->
+
+  <!-- Website header containing the website name and navigation -->
   <header>
+
+    <!-- Main website title -->
     <h1>CraftCorner</h1>
+
+    <!-- Navigation menu -->
     <nav>
+
+      <!-- Link to homepage -->
       <a href="homepage.html">Home</a>
+
+      <!-- Link to shop page -->
       <a href="shop.html">Shop</a>
+
     </nav>
   </header>
 
-  <img src="shop_image.jpg" alt="CraftCorner Shop" class="image1">
 
+  <!-- ================= SHOP IMAGE ================= -->
+
+  <!-- Banner image for the CraftCorner shop -->
+  <img
+    src="shop_image.jpg"
+    alt="CraftCorner Shop"
+    class="image1"
+  >
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+
+  <!-- Parent container for product and cart sections -->
   <div class="parent-container">
+
+
+    <!-- ================= PRODUCT HEADER ================= -->
+
+    <!-- Displays the column headings for the shopping cart -->
     <div class="productcontainer">
-        
+
+      <!-- Product column -->
       <h3>Product</h3>
+
+      <!-- Price column -->
       <h3>Price</h3>
+
+      <!-- Quantity column -->
       <h3>Quantity</h3>
+
+      <!-- Subtotal column -->
       <h3>Sub Total</h3>
+
     </div>
 
+
+    <!-- ================= CART TOTAL ================= -->
+
+    <!-- Displays the cart summary -->
     <div class="cartcontainer">
+
+      <!-- Cart heading -->
       <h2>Cart Total</h2>
+
+      <!-- Displays subtotal -->
       <h4>Subtotal</h4>
+
+      <!-- Displays total -->
       <h4>Total</h4>
 
-      <a href="checkout.html" class="cta-button">Check Out</a>
+
+      <!-- Checkout button that links to checkout page -->
+      <a href="checkout.html" class="cta-button">
+        Check Out
+      </a>
 
     </div>
 
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <!-- Area where product details can be added -->
     <div class="secondproductcontainer">
-      <!-- Add content here -->
+
+      <!-- Add product information here -->
+
     </div>
 
-    
+
   </div>
 
 </body>
 </html>
+```
